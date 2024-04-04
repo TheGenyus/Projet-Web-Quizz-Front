@@ -9,6 +9,10 @@ import { MajorsComponent } from "majors/majors.component"
 import { MajorsResolver } from "majors/majors.resolver"
 import { MajorStudentsResolver } from "majors/major-students/major-students.resolver"
 import { MajorStudentsComponent } from "majors/major-students/major-students.component"
+import { UserDetailsComponent } from "./users/user-details/user-details.component";
+import { UsersComponent } from "./users/users.component";
+import { UsersResolver } from "./users/users.resolver";
+import { UserDetailsResolver } from "./users/user-details/user-details.resolver";
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -24,6 +28,20 @@ const routes: Routes = [
     component: StudentDetailsComponent,
     resolve: {
       student: StudentDetailsResolver,
+    },
+  },
+  {
+    path: "utilisateurs",
+    component: UsersComponent,
+    resolve: {
+      users: UsersResolver,
+    },
+  },
+  {
+    path: "details-utilisateur/:id",
+    component: UserDetailsComponent,
+    resolve: {
+      user: UserDetailsResolver,
     },
   },
   {

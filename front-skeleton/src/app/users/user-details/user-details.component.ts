@@ -37,14 +37,15 @@ export class UserDetailsComponent {
   }
 
   save(user: User) {
-    const userId = this._route.snapshot.params["userId"]
+    const id = this._route.snapshot.params["id"]
 
-    if (userId == "new") {
+    if (id == "new") {
+      console.log(user);
       this.userService.create(user).subscribe(() => {
         this.router.navigate(["utilisateurs"])
       })
     } else {
-      this.userService.update(userId, user).subscribe(() => {
+      this.userService.update(id, user).subscribe(() => {
         this.router.navigate(["utilisateurs"])
       })
     }

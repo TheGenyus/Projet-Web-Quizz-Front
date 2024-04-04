@@ -14,7 +14,7 @@ export class UsersComponent {
 
   constructor(private _route: ActivatedRoute, private userService: UserService, private router: Router) {}
 
-  deleteStudent(event: any, user: User) {
+  deleteUser(event: any, user: User) {
     event.stopPropagation()
     this.userService.delete(user).subscribe(() => this.router.navigate(["users"]))
   }

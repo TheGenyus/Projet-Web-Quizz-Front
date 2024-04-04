@@ -2,7 +2,6 @@ import { Course } from "./course.model"
 import { Major } from "./major.model"
 
 export interface User {
-  userid?: bigint
-  image?: string
+  id?: bigint
   username: string
 }
