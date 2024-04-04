@@ -1,0 +1,19 @@
+@if (user$ | async; as user) {
+<h1>Données personnelles de l'utilisateur</h1>
+<form (ngSubmit)="save(user)" #userForm="ngForm">
+  <div class="form-group">
+    <label for="username">Pseudonyme</label>
+    <input
+      type="text"
+      class="form-control"
+      id="username"
+      required
+      [(ngModel)]="user.username"
+      name="username"
+      #username="ngModel"
+    />
+    <div [hidden]="username.valid || username.pristine" class="alert alert-danger">Le pseudonyme est obligatoire</div>
+  </div>
+  <button type="submit" mat-raised-button color="primary" [disabled]="!userForm.form.valid">Enregistrer</button>
+</form>
+}
