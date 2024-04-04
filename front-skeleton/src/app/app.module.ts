@@ -17,6 +17,8 @@ import { MajorStudentsComponent } from "majors/major-students/major-students.com
 import { HttpClientModule } from "@angular/common/http"
 import {UsersComponent} from "./users/users.component";
 import {UserDetailsComponent} from "./users/user-details/user-details.component";
+import {QuizzsComponent} from "./quizzs/quizzs.component";
+import {QuizzDetailsComponent} from "./quizzs/quizz-details/quizz-details.component";
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import {UserDetailsComponent} from "./users/user-details/user-details.component"
     MajorStudentsComponent,
     UsersComponent,
     UserDetailsComponent,
+    QuizzsComponent,
+    QuizzDetailsComponent,
   ],
   imports: [
     BrowserModule,

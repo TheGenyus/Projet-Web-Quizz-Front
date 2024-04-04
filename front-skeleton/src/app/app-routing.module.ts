@@ -13,6 +13,10 @@ import { UserDetailsComponent } from "./users/user-details/user-details.componen
 import { UsersComponent } from "./users/users.component";
 import { UsersResolver } from "./users/users.resolver";
 import { UserDetailsResolver } from "./users/user-details/user-details.resolver";
+import { QuizzDetailsComponent } from "./quizzs/quizz-details/quizz-details.component";
+import { QuizzsComponent } from "./quizzs/quizzs.component";
+import { QuizzsResolver } from "./quizzs/quizzs.resolver";
+import { QuizzDetailsResolver } from "./quizzs/quizz-details/quizz-details.resolver";
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -42,6 +46,20 @@ const routes: Routes = [
     component: UserDetailsComponent,
     resolve: {
       user: UserDetailsResolver,
+    },
+  },
+  {
+    path: "quizzs",
+    component: QuizzsComponent,
+    resolve: {
+      users: QuizzsResolver,
+    },
+  },
+  {
+    path: "details-quizz/:id",
+    component: QuizzDetailsComponent,
+    resolve: {
+      user: QuizzDetailsResolver,
     },
   },
   {
