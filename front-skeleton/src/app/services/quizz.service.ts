@@ -19,8 +19,8 @@ export class QuizzService {
     return this.http.get<Quizz>(`${this.quizzsUrl}/${id}`)
   }
 
-  update(id: number, user: Quizz): Observable<Quizz> {
-    return this.http.post<Quizz>(`${this.quizzsUrl}/${id}`, user)
+  update(id: number, quizz: Quizz): Observable<Quizz> {
+    return this.http.post<Quizz>(`${this.quizzsUrl}/${id}`, quizz)
   }
 
   create(quizz: Quizz): Observable<Quizz> {

@@ -18,8 +18,4 @@ export class QuizzsComponent {
     event.stopPropagation()
     this.quizzService.delete(quizz).subscribe(() => this.router.navigate(["quizzs"]))
   }
-
-  searchByMajorAndCourse($event: Observable<Quizz[]>) {
-    this.quizzs$ = $event
-  }
 }

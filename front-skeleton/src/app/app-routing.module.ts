@@ -52,14 +52,14 @@ const routes: Routes = [
     path: "quizzs",
     component: QuizzsComponent,
     resolve: {
-      users: QuizzsResolver,
+      quizzs: QuizzsResolver,
     },
   },
   {
     path: "details-quizz/:id",
     component: QuizzDetailsComponent,
     resolve: {
-      user: QuizzDetailsResolver,
+      quizz: QuizzDetailsResolver,
     },
   },
   {
