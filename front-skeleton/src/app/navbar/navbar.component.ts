@@ -10,9 +10,6 @@ export class NavbarComponent {
   links: Link[] = []
 
   constructor() {
-    this.links.push({ name: "Étudiants", href: "etudiants" })
-    this.links.push({ name: "Filières", href: "filieres" })
-    this.links.push({ name: "Utilisateurs", href: "utilisateurs" })
-    this.links.push({ name: "Quizzs", href: "quizzs" })
+    this.links.push({ name: "Administration", href: "admin" })
   }
 }

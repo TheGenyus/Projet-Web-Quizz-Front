@@ -17,9 +17,15 @@ import { QuizzDetailsComponent } from "./quizzs/quizz-details/quizz-details.comp
 import { QuizzsComponent } from "./quizzs/quizzs.component";
 import { QuizzsResolver } from "./quizzs/quizzs.resolver";
 import { QuizzDetailsResolver } from "./quizzs/quizz-details/quizz-details.resolver";
+import {QuizzQuestionsComponent} from "./quizzs/quizz-questions/quizz-questions.component";
+import {QuizzQuestionsResolver} from "./quizzs/quizz-questions/quizz-questions.resolver";
+import {AdministrationComponent} from "./Administration/administration.component";
+import {QuizzsPlayerComponent} from "./quizzs/quizz-player/quizzs-player.component";
+import {QuizzsPlayerResolver} from "./quizzs/quizz-player/quizzs-player.resolver";
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
+  { path: "admin", component: AdministrationComponent },
   {
     path: "etudiants",
     component: StudentsComponent,
@@ -49,10 +55,17 @@ const routes: Routes = [
     },
   },
   {
-    path: "quizzs",
+    path: "adminQuizzs",
     component: QuizzsComponent,
     resolve: {
       quizzs: QuizzsResolver,
+    },
+  },
+  {
+    path: "quizzs",
+    component: QuizzsPlayerComponent,
+    resolve: {
+      quizzs: QuizzsPlayerResolver,
     },
   },
   {
@@ -60,6 +73,13 @@ const routes: Routes = [
     component: QuizzDetailsComponent,
     resolve: {
       quizz: QuizzDetailsResolver,
+    },
+  },
+  {
+    path: "questions-quizz/:id",
+    component: QuizzQuestionsComponent,
+    resolve: {
+      quizz: QuizzQuestionsResolver,
     },
   },
   {

@@ -1,0 +1,20 @@
+<div class="d-flex align-items-center">
+  <h1>Questions du quizz</h1>
+</div>
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">Question</th>
+  </tr>
+  </thead>
+  <tbody>
+  @if (questionsFromQuizz$ | async; as questionsFromQuizz) { @if (questionsFromQuizz.length === 0) {
+    <h2>Il n'y a pas de question dans ce quiz</h2>
+    }
+  @for (question of questionsFromQuizz; track question) {
+  <tr>
+    <td>{{ question.texte }}</td>
+  </tr>
+  } }
+  </tbody>
+</table>

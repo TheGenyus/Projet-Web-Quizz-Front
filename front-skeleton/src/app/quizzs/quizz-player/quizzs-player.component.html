@@ -1,0 +1,20 @@
+<div class="d-flex align-items-center">
+  <h1>Quizzs</h1>
+  <a mat-raised-button color="primary" routerLink="/details-quizz/new">Ajouter</a>
+</div>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Titre du quizz</th>
+      <th scope="col">Description du quizz</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (quizz of quizzs$ | async; track quizz) {
+    <tr routerLink="/questions-quizz/{{ quizz.id }}">
+      <td>{{ quizz.title }}</td>
+      <td>{{ quizz.description }}</td>
+    </tr>
+    }
+  </tbody>
+</table>

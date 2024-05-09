@@ -19,12 +19,16 @@ import {UsersComponent} from "./users/users.component";
 import {UserDetailsComponent} from "./users/user-details/user-details.component";
 import {QuizzsComponent} from "./quizzs/quizzs.component";
 import {QuizzDetailsComponent} from "./quizzs/quizz-details/quizz-details.component";
+import {QuizzQuestionsComponent} from "./quizzs/quizz-questions/quizz-questions.component";
+import {AdministrationComponent} from "./Administration/administration.component";
+import {QuizzsPlayerComponent} from "./quizzs/quizz-player/quizzs-player.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomeComponent,
+    AdministrationComponent,
     StudentsComponent,
     StudentDetailsComponent,
     MajorsComponent,
@@ -33,6 +37,8 @@ import {QuizzDetailsComponent} from "./quizzs/quizz-details/quizz-details.compon
     UserDetailsComponent,
     QuizzsComponent,
     QuizzDetailsComponent,
+    QuizzQuestionsComponent,
+    QuizzsPlayerComponent,
   ],
   imports: [
     BrowserModule,

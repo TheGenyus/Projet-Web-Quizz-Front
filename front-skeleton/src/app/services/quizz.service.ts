@@ -2,6 +2,7 @@ import { Injectable } from "@angular/core"
 import { Observable } from "rxjs"
 import { Quizz } from "models/quizz.model"
 import { HttpClient } from "@angular/common/http"
+import { Question } from "../models/question.model";
 
 @Injectable({
   providedIn: "root",
@@ -29,5 +30,9 @@ export class QuizzService {
 
   delete(quizz: Quizz) {
     return this.http.delete(`${this.quizzsUrl}/${quizz.id}`)
+  }
+
+  findQuestionsFromQuizz(quizzId: string): Observable<Question[]> {
+    return this.http.get<Question[]>(this.quizzsUrl + `/${quizzId}/questions`)
   }
 }

@@ -17,10 +17,6 @@ export class QuizzDetailsComponent {
   quizz$: Observable<Quizz> = this._route.data.pipe(map((data) => data["quizz"]))
   allMajors$: Observable<Major[]> | undefined
   allCourses$: Observable<Course[]> | undefined
-  majorSelectModel: Major | null = null
-  courseSelectModel: Course | null = null
-  notSelectedCourse: boolean | undefined
-  today = new Date(Date.now())
 
   constructor(
     private _route: ActivatedRoute,
