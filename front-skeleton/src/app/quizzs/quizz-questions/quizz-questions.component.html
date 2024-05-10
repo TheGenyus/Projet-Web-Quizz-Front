@@ -1,0 +1,16 @@
+<div class="d-flex align-items-center">
+  <h1>Questions du quizz</h1>
+</div>
+@if (questionsFromQuizz$ | async; as questionsFromQuizz) { @if (questionsFromQuizz.length === 0) {
+<h2>Il n'y a pas de question dans ce quiz</h2>
+}
+@for (question of questionsFromQuizz; track question) {
+  <h2>{{ question.texte }}</h2>
+  @if (reponsesFromQuestion$ | async; as reponsesFromQuestion) { @if (reponsesFromQuestion.length === 0) {
+  <h3>Il n'y a pas de réponses à cette question</h3>
+  }
+  @for (reponse of reponsesFromQuestion; track reponse) {
+  <p> {{ reponse.texte }}</p>
+  <input type="checkbox" id={{reponse.id}} name="" />
+} }
+} }

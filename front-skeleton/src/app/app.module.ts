@@ -7,28 +7,30 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations"
 import { NavbarComponent } from "navbar/navbar.component"
 import { MatListModule } from "@angular/material/list"
 import { HomeComponent } from "home/home.component"
-import { StudentsComponent } from "students/students.component"
-import { StudentDetailsComponent } from "students/student-details/student-details.component"
 import { FormsModule } from "@angular/forms"
 import { MatIconModule } from "@angular/material/icon"
 import { MatButtonModule } from "@angular/material/button"
-import { MajorsComponent } from "majors/majors.component"
-import { MajorStudentsComponent } from "majors/major-students/major-students.component"
 import { HttpClientModule } from "@angular/common/http"
 import {UsersComponent} from "./users/users.component";
 import {UserDetailsComponent} from "./users/user-details/user-details.component";
+import {QuizzsComponent} from "./quizzs/quizzs.component";
+import {QuizzDetailsComponent} from "./quizzs/quizz-details/quizz-details.component";
+import {QuizzQuestionsComponent} from "./quizzs/quizz-questions/quizz-questions.component";
+import {AdministrationComponent} from "./Administration/administration.component";
+import {QuizzsPlayerComponent} from "./quizzs/quizz-player/quizzs-player.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    StudentsComponent,
-    StudentDetailsComponent,
-    MajorsComponent,
-    MajorStudentsComponent,
+    AdministrationComponent,
     UsersComponent,
     UserDetailsComponent,
+    QuizzsComponent,
+    QuizzDetailsComponent,
+    QuizzQuestionsComponent,
+    QuizzsPlayerComponent,
   ],
   imports: [
     BrowserModule,

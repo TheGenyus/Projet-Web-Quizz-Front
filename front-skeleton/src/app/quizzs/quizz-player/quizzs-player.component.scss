@@ -1,5 +1,4 @@
 @use "theme";
-
 :host {
   display: flex;
   flex-direction: column;
@@ -9,11 +8,23 @@
     display: flex;
     color: theme.$common-purple;
     font-size: xx-large;
-    margin-right: 50px;
+    margin-right: 100px;
     margin-bottom: 0;
   }
 
   table {
     margin-top: 20px;
+    vertical-align: center;
+
+    tbody {
+      :hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  img {
+    height: 3rem;
+    width: auto;
   }
 }
