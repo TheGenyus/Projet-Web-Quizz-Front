@@ -10,7 +10,7 @@ import { QuizzsComponent } from "./quizzs/quizzs.component";
 import { QuizzsResolver } from "./quizzs/quizzs.resolver";
 import { QuizzDetailsResolver } from "./quizzs/quizz-details/quizz-details.resolver";
 import {QuizzQuestionsComponent} from "./quizzs/quizz-questions/quizz-questions.component";
-import {QuizzQuestionsResolver} from "./quizzs/quizz-questions/quizz-questions.resolver";
+import {QuestionReponsesResolver, QuizzQuestionsResolver} from "./quizzs/quizz-questions/quizz-questions.resolver";
 import {AdministrationComponent} from "./Administration/administration.component";
 import {QuizzsPlayerComponent} from "./quizzs/quizz-player/quizzs-player.component";
 import {QuizzsPlayerResolver} from "./quizzs/quizz-player/quizzs-player.resolver";
@@ -58,6 +58,7 @@ const routes: Routes = [
     component: QuizzQuestionsComponent,
     resolve: {
       questionsFromQuizz: QuizzQuestionsResolver,
+      reponsesFromQuestion: QuestionReponsesResolver,
     },
   },
 ]
