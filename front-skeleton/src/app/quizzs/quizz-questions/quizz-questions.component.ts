@@ -9,7 +9,7 @@ import {Question} from "../../models/question.model";
   styleUrls: ["./quizz-questions.component.scss"],
 })
 export class QuizzQuestionsComponent implements OnInit {
-  questionsFromQuizz$: Observable<Question[]> = this._route.data.pipe(map((data) => data["questionsFromQuizz$"]))
+  questionsFromQuizz$: Observable<Question[]> = this._route.data.pipe(map((data) => data["questionsFromQuizz"]))
 
   constructor(private _route: ActivatedRoute) {}
 
