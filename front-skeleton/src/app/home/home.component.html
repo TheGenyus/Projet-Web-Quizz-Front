@@ -1,6 +1,53 @@
-<span class="title">Bonjour à vous !</span>
-<div>
-  <span class="welcome">Bienvenue sur ce super site de quizs </span>
-  <img src="assets/sun.gif" height="100">
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page d'accueil - Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      text-align: center;
+      padding: 50px;
+    }
+    .title {
+      font-size: 36px;
+      color: #333;
+    }
+    .welcome {
+      font-size: 24px;
+      color: #666;
+    }
+    img {
+      margin-top: 20px;
+    }
+    .btn {
+      margin-top: 30px;
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: rgba(255, 0, 128, 0.92);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 18px;
+      transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #880156;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="title">Bienvenue sur notre site de quiz !</div>
+  <div class="welcome">Testez vos connaissances et amusez-vous bien !</div>
+  <img src="assets/giphy.gif" alt="quiz" height="100">
+  <br>
+  <a class="btn" routerLink="src/app/quizzs">Commencer un quiz</a>
 </div>
-<a mat-raised-button color="primary" routerLink="quizzs">Vous pouvez choisir un quiz en cliquant sur ce lien</a>
+</body>
+</html>
